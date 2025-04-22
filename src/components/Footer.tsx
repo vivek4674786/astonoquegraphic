@@ -25,6 +25,7 @@ export default function Footer() {
           <ImageIcon />
           X
           </div>
+          <div className="flex flex-col items-center">
           <ImageIcon />
           LinkedIn
           </div>
