@@ -65,7 +65,7 @@ export default function PortfolioGlimps() {
   ]
 
   return (
-    <div className='py-5'>
+    <div id="portfolio" className='py-5'>
       <h3 className="text-4xl py-5 font-bold text-center">Portfolio Glimps</h3>
       <div className="overflow-hidden">
         <div className="flex animate-infinite-scroll-left gap-6">

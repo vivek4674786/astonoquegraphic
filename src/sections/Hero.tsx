@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import NevigateRight from '../assets/NevigateRight';
-import NevigateLeft from '../assets/NevigateLeft';
+import NevigateRight from '../assets/Icons/NevigateRight';
+import NevigateLeft from '../assets/Icons/NevigateLeft';
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
