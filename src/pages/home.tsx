@@ -7,15 +7,20 @@ import ContactForm from '../sections/ContactForm';
 import Footer from '../components/Footer';  
 export default function Home() {
   return (
-    <div>
+    <div className="md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1750px] mx-auto">
+      {/* Header */}
       <div>
         <Header />
       </div>
-      <Hero />
-      <Content1 />
-      <WorkScope />
-      <PortfolioGlimps />
-      <ContactForm />
+      {/* Body */}
+      <div>
+        <Hero />
+        <Content1 />
+        <WorkScope />
+        <PortfolioGlimps />
+        <ContactForm />
+      </div>
+      {/* Footer */}
       <div>
         <Footer />
       </div>

@@ -46,7 +46,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="relative w-full h-[85vh] overflow-hidden">
+    <div className="relative w-full h-[85vh] max-h-[750px] overflow-hidden">
       {/* Slides */}
       <div 
         className="flex transition-transform duration-500 ease-in-out h-full"
