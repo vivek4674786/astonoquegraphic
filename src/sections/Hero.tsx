@@ -3,6 +3,7 @@ import NevigateRight from '../assets/Icons/NevigateRight';
 import NevigateLeft from '../assets/Icons/NevigateLeft';
 import axios from 'axios';
 import { THeroSlide } from '../types/homepageTypes';
+import env from '../env.config';
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -10,7 +11,8 @@ export default function Hero() {
 
   const getData = async () => {
     try { 
-      const response = await axios.get('http://localhost:3001/hero');
+      const url = `${env.apiUrl}/hero`
+      const response = await axios.get(url);
       const {heroSlides} = response.data;
       console.log("data", heroSlides);
       setHeroSlides(heroSlides);
