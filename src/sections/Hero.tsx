@@ -1,12 +1,34 @@
 import { useState, useEffect } from 'react';
 import NevigateRight from '../assets/Icons/NevigateRight';
 import NevigateLeft from '../assets/Icons/NevigateLeft';
+import axios from 'axios';
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [heroSlides, setHeroSlides] = useState([]);
+
+  const getData = async () => {
+    try { 
+      const response = await axios.get('http://localhost:3001/hero');
+      const {heroSlides} = response.data;
+      console.log("data", heroSlides);
+      setHeroSlides(heroSlides);
+    } catch (error) {
+      console.log("error", error);
+    }
+  }
+
+  useEffect(() => {
+    getData();
+  },[])
   
   // Sample images - replace these with your actual image URLs
-  const slides = [
+  const slides = heroSlides.map((slide) => ({
+    title: slide?.title || 'Title',
+    bgColor: slide?.bgColor || 'bg-red-200',
+    description: slide?.description || 'Description'
+  }));
+  const slides2 = [
     {
       title: 'Logos',
       bgColor: 'bg-red-200',
