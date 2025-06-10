@@ -1,6 +1,6 @@
-import React from 'react';
+import { TNavBar } from '../types/homepageTypes';
 
-const Navbar: React.FC = ({ navbarObject }: { navbarObject: any }) => {
+const Navbar = ({ navbarObject }: { navbarObject: TNavBar[] }) => {
   console.log("navbarObject",navbarObject);
   const navbarItems = navbarObject?.sort((a: {orderNumber: number}, b: {orderNumber: number}) => a.orderNumber - b.orderNumber)?.map((item: any) => ({
     label: item.label,

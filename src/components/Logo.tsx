@@ -1,4 +1,6 @@
-const Logo = (logoData: { logoName: string, logoImage: string }) => {
+import { TLogo } from "../types/homepageTypes";
+
+const Logo = (logoData: { logoName: string, logoImage: TLogo }) => {
   console.log("insideLogo : ",logoData);
   const websiteTitle = logoData?.logoName || "Astonoquegraphic";
   let logo = logoData?.logoImage?.url || "https://img.freepik.com/premium-vector/test-icon-vector-design-templates_1172029-3113.jpg?w=900";

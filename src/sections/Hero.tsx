@@ -2,10 +2,11 @@ import { useState, useEffect } from 'react';
 import NevigateRight from '../assets/Icons/NevigateRight';
 import NevigateLeft from '../assets/Icons/NevigateLeft';
 import axios from 'axios';
+import { THeroSlide } from '../types/homepageTypes';
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [heroSlides, setHeroSlides] = useState([]);
+  const [heroSlides, setHeroSlides] = useState<THeroSlide[]>([]);
 
   const getData = async () => {
     try { 
@@ -28,28 +29,28 @@ export default function Hero() {
     bgColor: slide?.bgColor || 'bg-red-200',
     description: slide?.description || 'Description'
   }));
-  const slides2 = [
-    {
-      title: 'Logos',
-      bgColor: 'bg-red-200',
-      description: 'We create logos for your business'
-    },
-    {
-      title: 'Visiting Cards',
-      bgColor: 'bg-blue-200',
-      description: 'We create visiting cards for your business'
-    },
-    {
-      title: 'Banners',
-      bgColor: 'bg-green-200',
-      description: 'We create banners for your business'
-    },
-    {
-      title: 'Posters',
-      bgColor: 'bg-yellow-200',
-      description: 'We create posters for your business'
-    },
-  ];
+  // const slides2 = [
+  //   {
+  //     title: 'Logos',
+  //     bgColor: 'bg-red-200',
+  //     description: 'We create logos for your business'
+  //   },
+  //   {
+  //     title: 'Visiting Cards',
+  //     bgColor: 'bg-blue-200',
+  //     description: 'We create visiting cards for your business'
+  //   },
+  //   {
+  //     title: 'Banners',
+  //     bgColor: 'bg-green-200',
+  //     description: 'We create banners for your business'
+  //   },
+  //   {
+  //     title: 'Posters',
+  //     bgColor: 'bg-yellow-200',
+  //     description: 'We create posters for your business'
+  //   },
+  // ];
 
   useEffect(() => {
     const timer = setInterval(() => {

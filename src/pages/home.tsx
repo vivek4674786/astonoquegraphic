@@ -7,10 +7,11 @@ import ContactForm from '../sections/ContactForm';
 import Footer from '../components/Footer';  
 import { useEffect, useState } from 'react';
 import env from '../env.config';
+import { TGlobal } from '../types/homepageTypes';
 
 export default function Home() {
 
-  const [globalState, setGlobalState] = useState(null);
+  const [globalState, setGlobalState] = useState<TGlobal | null>(null);
 
   useEffect(() => {
     async function fetchData() {
